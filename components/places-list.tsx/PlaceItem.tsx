@@ -1,0 +1,14 @@
+import ItemContent from "./ItemContent";
+import { PlaceItemProps } from "@/types";
+
+const PlaceItem = ({ firstAddress, secondAddress }: PlaceItemProps) => {
+  if (secondAddress === "") secondAddress = "-";
+  return (
+    <div className="rounded-md flex flex-col gap-1 justify-between items-center w-full">
+      <ItemContent address={firstAddress} />
+      <ItemContent icon={true} address={secondAddress} letter="B" />
+    </div>
+  );
+};
+
+export default PlaceItem;
