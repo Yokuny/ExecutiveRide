@@ -8,7 +8,7 @@ const Location = () => {
     <Card className="w-full flex max-w-4xl p-3">
       <CardBody className="p-0 gap-4 flex items-center w-full">
         <LocationSearch />
-        <ActualLocation address="Av. Evandi Americo Comarela, 257" />
+        <ActualLocation address="" />
         <LocationActions />
       </CardBody>
     </Card>

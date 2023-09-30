@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
-import { RootLayoutProps } from "@/types";
+import { ChildrenProps } from "@/types";
 import clsx from "clsx";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: ChildrenProps) {
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <head />

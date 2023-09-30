@@ -16,8 +16,13 @@ export interface ProvidersProps {
   themeProps?: ThemeProviderProps;
 }
 
-export interface RootLayoutProps {
+export interface ChildrenProps {
   children: React.ReactNode;
+}
+
+export interface ErrorProps {
+  error: Error;
+  reset: () => void;
 }
 
 export interface PlaceItemProps {
@@ -36,7 +41,7 @@ export interface BeginningOrEndProps {
 }
 
 export interface ABPointProps {
-  letter: string | null;
+  icon?: boolean;
 }
 
 export interface ActualLocationProps {

@@ -23,7 +23,7 @@ export const Logo: React.FC<IconSvgProps> = ({
 	</svg>
 );
 
-export const TrashIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, ...props }) => {
+export const TrashIcon: React.FC<IconSvgProps> = ({ size = 19, width, height, ...props }) => {
   return (
     <svg height={size || height} viewBox="0 0 512 500" width={size || width} {...props}>
       <path
@@ -42,13 +42,23 @@ export const TrashIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, ..
         d="M80 112h352"
       />
       <path
-        d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224"
+        d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176l8"
         fill="none"
         stroke="currentColor"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="32"
       />
+    </svg>
+  );
+};
+
+export const EraseIcon: React.FC<IconSvgProps> = ({ size = 19, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 24 24" width={size || width} {...props}>
+      <path
+        fill="currentColor"
+        d="M15.8698693,2.66881311 L20.838395,7.63733874 C21.7170746,8.5160184 21.7170746,9.9406396 20.838395,10.8193193 L12.1565953,19.4998034 L18.25448,19.5 C18.6341758,19.5 18.947971,19.7821539 18.9976334,20.1482294 L19.00448,20.25 C19.00448,20.6296958 18.7223262,20.943491 18.3562506,20.9931534 L18.25448,21 L9.84446231,21.0012505 C9.22825282,21.0348734 8.60085192,20.8163243 8.13013068,20.345603 L3.16160505,15.3770774 C2.28292539,14.4983977 2.28292539,13.0737765 3.16160505,12.1950969 L12.6878888,2.66881311 C13.5665685,1.79013346 14.9911897,1.79013346 15.8698693,2.66881311 Z M5.70859531,11.7678034 L4.22226522,13.255757 C3.929372,13.5486503 3.929372,14.023524 4.22226522,14.3164172 L9.19079085,19.2849428 C9.33723746,19.4313895 9.5291792,19.5046128 9.72112094,19.5046128 L9.75,19.5 L9.78849588,19.5015989 C9.95740385,19.4864544 10.1221581,19.4142357 10.251451,19.2849428 L11.7375953,17.7978034 L5.70859531,11.7678034 Z M13.748549,3.72947329 L6.76959531,10.7068034 L12.7985953,16.7368034 L19.7777348,9.75865909 C20.070628,9.46576587 20.070628,8.99089214 19.7777348,8.69799892 L14.8092091,3.72947329 C14.5163159,3.43658007 14.0414422,3.43658007 13.748549,3.72947329 Z"></path>
     </svg>
   );
 };
@@ -98,25 +108,34 @@ export const DownIcon: React.FC<IconSvgProps> = ({ size = 12, width, height, ...
   );
 };
 
-export const HouseIcon: React.FC<IconSvgProps> = ({ size = 20, width, height, ...props }) => {
+export const PointIcon: React.FC<IconSvgProps> = ({ size = 17, width, height, ...props }) => {
   return (
-    <svg height={size || height} viewBox="0 0 512 500" width={size || width} {...props}>
+    <svg height={size || height} viewBox="0 0 16 16" width={size || width} {...props}>
       <path
-        d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212"
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="32"
+        fill="#fff"
+        d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"
       />
       <path
-        d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69"
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="32"
+        fill="#fff"
+        d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"
       />
+    </svg>
+  );
+};
+
+export const WayIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 48 48" width={size || width} {...props}>
+      <path fill="none" stroke="#fff" strokeLinecap="round" strokeWidth="2" d="M8.4464,7.6291v6.9622" />
+      <path
+        fill="none"
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeWidth="2"
+        d="M39.5536,40.2045m0-14.2335V15.422h0A7.7768,7.7768,0,1,0,24,15.422V32.578a7.7768,7.7768,0,1,1-15.5536,0V28.8248"
+      />
+      <ellipse fill="#fff" cx="8.4464" cy="21.7081" rx="3.9464" ry="3.9546" />
+      <ellipse fill="#fff" cx="39.5536" cy="26.0877" rx="3.9464" ry="3.9546" />
     </svg>
   );
 };

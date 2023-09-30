@@ -6,7 +6,7 @@ const PlaceItem = ({ firstAddress, secondAddress }: PlaceItemProps) => {
   return (
     <div className="rounded-md flex flex-col gap-1 justify-between items-center w-full">
       <ItemContent address={firstAddress} />
-      <ItemContent icon={true} address={secondAddress} letter="B" />
+      <ItemContent icon={false} address={secondAddress} />
     </div>
   );
 };
