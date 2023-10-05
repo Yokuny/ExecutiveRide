@@ -20,6 +20,12 @@ export interface ChildrenProps {
   children: React.ReactNode;
 }
 
+export interface LocationData {
+  address: string;
+  latitude: number;
+  longitude: number;
+}
+
 export interface ErrorProps {
   error: Error;
   reset: () => void;
@@ -45,5 +51,7 @@ export interface ABPointProps {
 }
 
 export interface ActualLocationProps {
-  address?: string;
+  loading: boolean;
+  address: string;
 }
+

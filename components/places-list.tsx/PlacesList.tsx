@@ -4,7 +4,7 @@ import ListItems from "./ListItems";
 
 const PlacesList = () => {
   return (
-    <Card className="w-full flex items-center max-w-4xl p-3">
+    <Card className="w-full flex items-center max-w-4xl p-2">
       <ListItems />
       <ListFooter />
     </Card>
