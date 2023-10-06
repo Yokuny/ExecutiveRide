@@ -1,4 +1,5 @@
 import { CardBody } from "@nextui-org/card";
+import { useGlobalContext } from "@/app/context";
 import PlaceItem from "./PlaceItem";
 
 const ListItems = () => {

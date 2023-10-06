@@ -1,4 +1,5 @@
-import {SVGProps} from "react";
+import { SVGProps, Dispatch, SetStateAction } from "react";
+
 import { ThemeProviderProps } from "next-themes/dist/types";
 import { SwitchProps } from "@nextui-org/switch";
 
@@ -31,6 +32,11 @@ export interface ErrorProps {
   reset: () => void;
 }
 
+export interface ContextProps {
+  location: LocationData;
+  setLocation: Dispatch<SetStateAction<LocationData>>;
+}
+
 export interface PlaceItemProps {
   firstAddress: string;
   secondAddress: string;
@@ -54,4 +60,3 @@ export interface ActualLocationProps {
   loading: boolean;
   address: string;
 }
-

@@ -30,24 +30,24 @@ export const TrashIcon: React.FC<IconSvgProps> = ({ size = 19, width, height, ..
         d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320"
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="32"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
       />
       <path
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-miterlimit="10"
-        stroke-width="32"
+        strokeLinecap="round"
+        strokeMiterlimit="10"
+        strokeWidth="32"
         d="M80 112h352"
       />
       <path
         d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176l8"
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="32"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
       />
     </svg>
   );
@@ -69,18 +69,18 @@ export const ConfirmIcon: React.FC<IconSvgProps> = ({ size = 25, width, height, 
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="32"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
         d="M400 352l64-64-64-64"
       />
       <path
         d="M448 288H154c-58.76 0-106-49.33-106-108v-20"
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="32"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
       />
     </svg>
   );
@@ -159,31 +159,31 @@ export const LocationIcon: React.FC<IconSvgProps> = ({ size = 24, width, height,
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="48"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="48"
         d="M256 96V56M256 456v-40"
       />
       <path
         d="M256 112a144 144 0 10144 144 144 144 0 00-144-144z"
         fill="none"
         stroke="currentColor"
-        stroke-miterlimit="10"
-        stroke-width="32"
+        strokeMiterlimit="10"
+        strokeWidth="32"
       />
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="48"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="48"
         d="M416 256h40M56 256h40"
       />
     </svg>
   );
 };
 
-export const MoonFilledIcon = ({ size = 24, width, height, ...props }: IconSvgProps) => (
+export const MoonFilledIcon = ({ size = 22, width, height, ...props }: IconSvgProps) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -199,7 +199,7 @@ export const MoonFilledIcon = ({ size = 24, width, height, ...props }: IconSvgPr
   </svg>
 );
 
-export const SunFilledIcon = ({ size = 24, width, height, ...props }: IconSvgProps) => (
+export const SunFilledIcon = ({ size = 22, width, height, ...props }: IconSvgProps) => (
   <svg
     aria-hidden="true"
     focusable="false"

@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
+import type { LocationData } from "@/types";
 import { SearchIcon, LocationIcon } from "../icons";
-import { LocationData } from "../../types/index";
-import getActualLocation from "../../utils/getActualLocation";
-import searchAddress from "../../utils/searchAddress";
+import { getActualLocation, searchAddress } from "../../utils/getActualLocation";
 
 interface LocationSearchProps {
   setLoading: (loading: boolean) => void;
@@ -26,13 +25,9 @@ const LocationSearch = ({ setLoading, setLocation }: LocationSearchProps) => {
     try {
       setLocation(await searchAddress(address));
     } finally {
+      setAddress("");
       setLoading(false);
     }
-  };
-
-  const putLoading = () => {
-    setLocation({} as LocationData);
-    setLoading(true);
   };
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,6 +41,11 @@ const LocationSearch = ({ setLoading, setLocation }: LocationSearchProps) => {
     }
   };
 
+  const putLoading = () => {
+    setLocation({} as LocationData);
+    setLoading(true);
+  };
+
   return (
     <div className="w-full h-12 flex flex-row items-center gap-4">
       <form className="w-full h-full flex items-center rounded-lg overflow-hidden bg-default-100 hover:bg-default-200">
@@ -57,6 +57,7 @@ const LocationSearch = ({ setLoading, setLocation }: LocationSearchProps) => {
           placeholder="Sua localização"
         />
         <Button
+          type="reset"
           className="w-10 md:w-20 m-2"
           onClick={() => {
             putLoading();

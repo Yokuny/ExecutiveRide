@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { Metadata } from "next";
+import { GlobalProvider } from "./context";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
@@ -32,7 +33,9 @@ export default function RootLayout({ children }: ChildrenProps) {
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container mx-auto max-w-7xl px-3 flex-grow">{children}</main>
+            <main className="container mx-auto max-w-7xl px-3 flex-grow">
+              <GlobalProvider>{children}</GlobalProvider>
+            </main>
           </div>
         </Providers>
       </body>
