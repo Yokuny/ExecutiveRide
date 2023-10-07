@@ -10,12 +10,21 @@ interface LocationActionsProps {
 }
 
 const LocationActions = ({ erase, data, disabled }: LocationActionsProps) => {
-  const { setLocation } = useGlobalContext();
+  const { location, setLocation } = useGlobalContext();
 
   const saveLocation = () => {
-    setLocation(data);
-    //salvar no localstorage
+    setLocation([...location, data]);
     erase({} as LocationData);
+
+    const locations = localStorage.getItem("actualLocation");
+    if (!locations) {
+      localStorage.setItem("actualLocation", JSON.stringify([data]));
+    } else if (typeof locations === "string") {
+      const storedLocations = JSON.parse(locations);
+
+      const newLocations = [...storedLocations, data];
+      localStorage.setItem("actualLocation", JSON.stringify(newLocations));
+    }
   };
 
   return (

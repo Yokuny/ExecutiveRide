@@ -12,17 +12,11 @@ const Location = () => {
   const [locationData, setLocationData] = useState({} as LocationData);
 
   useEffect(() => {
-    const checkState = () => {
-      if (typeof locationData.address === "string") {
-        setDisabled(false);
-        setLoading(false);
-      } else {
-        setDisabled(true);
-        setLocationData({} as LocationData);
-      }
-    };
     if (typeof locationData.address === "string") {
-      checkState();
+      setDisabled(false);
+      setLoading(false);
+    } else {
+      setDisabled(true);
     }
   }, [locationData]);
 

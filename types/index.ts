@@ -33,8 +33,8 @@ export interface ErrorProps {
 }
 
 export interface ContextProps {
-  location: LocationData;
-  setLocation: Dispatch<SetStateAction<LocationData>>;
+  location: LocationData[];
+  setLocation: Dispatch<SetStateAction<LocationData[]>>;
 }
 
 export interface PlaceItemProps {
