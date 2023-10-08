@@ -1,13 +1,7 @@
 import { Button } from "@nextui-org/button";
 import { useGlobalContext } from "@/app/context";
-import type { LocationData } from "@/types";
+import type { LocationData, LocationActionsProps } from "@/types";
 import { TrashIcon, ConfirmIcon } from "../icons";
-
-interface LocationActionsProps {
-  disabled: boolean;
-  data: LocationData;
-  erase: (value: LocationData) => void;
-}
 
 const LocationActions = ({ erase, data, disabled }: LocationActionsProps) => {
   const { location, setLocation } = useGlobalContext();

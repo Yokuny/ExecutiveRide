@@ -1,25 +1,34 @@
 import { CardFooter } from "@nextui-org/card";
 import { Button } from "@nextui-org/button";
-import { EraseIcon } from "@/components/icons";
+import { UserIcon } from "@/components/icons";
+import type { ListFooterProps } from "@/types";
+import ListFooterSkeleton from "./ListFooterSkeleton";
 
-const ListFooter = () => {
+const ListFooter = ({ disabled }: ListFooterProps) => {
   return (
     <CardFooter className="w-3/4 flex justify-center items-center gap-4">
-      <Button
-        className="hover:opacity-90 w-1/6 bg-default-200"
-        size="sm"
-        radius="sm"
-        aria-label="Erase location">
-        <EraseIcon />
-      </Button>
-      <Button
-        className="hover:opacity-90 w-1/3 text-sm"
-        color="primary"
-        size="sm"
-        radius="sm"
-        aria-label="Confirm location">
-        Finalizar
-      </Button>
+      {disabled ? (
+        <ListFooterSkeleton />
+      ) : (
+        <>
+          <Button
+            className="hover:opacity-90 w-1/3 text-sm"
+            color="primary"
+            size="sm"
+            radius="sm"
+            aria-label="Confirm location">
+            Finalizar
+          </Button>
+          <Button
+            className="hover:opacity-90 w-1/6"
+            color="success"
+            size="sm"
+            radius="sm"
+            aria-label="Erase location">
+            <UserIcon />
+          </Button>
+        </>
+      )}
     </CardFooter>
   );
 };

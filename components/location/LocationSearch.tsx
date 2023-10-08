@@ -1,14 +1,9 @@
 import { useState } from "react";
 import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
-import type { LocationData } from "@/types";
+import type { LocationData, LocationSearchProps } from "@/types";
 import { SearchIcon, LocationIcon } from "../icons";
 import { getActualLocation, searchAddress } from "../../utils/getActualLocation";
-
-interface LocationSearchProps {
-  setLoading: (loading: boolean) => void;
-  setLocation: (location: LocationData) => void;
-}
 
 const LocationSearch = ({ setLoading, setLocation }: LocationSearchProps) => {
   const [address, setAddress] = useState("");
@@ -32,11 +27,9 @@ const LocationSearch = ({ setLoading, setLocation }: LocationSearchProps) => {
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value === "" || e.target.value.length < 6) {
-      e.target.style.borderBottom = "1px dashed crimson";
       setLocation({} as LocationData);
       setLoading(false);
     } else {
-      e.target.style.border = "1px dotted transparent";
       setAddress(e.target.value);
     }
   };

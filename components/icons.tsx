@@ -38,7 +38,7 @@ export const TrashIcon: React.FC<IconSvgProps> = ({ size = 19, width, height, ..
         stroke="currentColor"
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="32"
+        strokeWidth="46"
         d="M80 112h352"
       />
       <path
@@ -47,18 +47,38 @@ export const TrashIcon: React.FC<IconSvgProps> = ({ size = 19, width, height, ..
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="32"
+        strokeWidth="38"
       />
     </svg>
   );
 };
 
-export const EraseIcon: React.FC<IconSvgProps> = ({ size = 19, width, height, ...props }) => {
+export const UserIcon: React.FC<IconSvgProps> = ({ size = 19, width, height, ...props }) => {
   return (
-    <svg height={size || height} viewBox="0 0 24 24" width={size || width} {...props}>
+    <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
       <path
-        fill="currentColor"
-        d="M15.8698693,2.66881311 L20.838395,7.63733874 C21.7170746,8.5160184 21.7170746,9.9406396 20.838395,10.8193193 L12.1565953,19.4998034 L18.25448,19.5 C18.6341758,19.5 18.947971,19.7821539 18.9976334,20.1482294 L19.00448,20.25 C19.00448,20.6296958 18.7223262,20.943491 18.3562506,20.9931534 L18.25448,21 L9.84446231,21.0012505 C9.22825282,21.0348734 8.60085192,20.8163243 8.13013068,20.345603 L3.16160505,15.3770774 C2.28292539,14.4983977 2.28292539,13.0737765 3.16160505,12.1950969 L12.6878888,2.66881311 C13.5665685,1.79013346 14.9911897,1.79013346 15.8698693,2.66881311 Z M5.70859531,11.7678034 L4.22226522,13.255757 C3.929372,13.5486503 3.929372,14.023524 4.22226522,14.3164172 L9.19079085,19.2849428 C9.33723746,19.4313895 9.5291792,19.5046128 9.72112094,19.5046128 L9.75,19.5 L9.78849588,19.5015989 C9.95740385,19.4864544 10.1221581,19.4142357 10.251451,19.2849428 L11.7375953,17.7978034 L5.70859531,11.7678034 Z M13.748549,3.72947329 L6.76959531,10.7068034 L12.7985953,16.7368034 L19.7777348,9.75865909 C20.070628,9.46576587 20.070628,8.99089214 19.7777348,8.69799892 L14.8092091,3.72947329 C14.5163159,3.43658007 14.0414422,3.43658007 13.748549,3.72947329 Z"></path>
+        d="M376 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
+        fill="none"
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="40"
+      />
+      <path
+        d="M288 304c-87 0-175.3 48-191.64 138.6-2 10.92 4.21 21.4 15.65 21.4H464c11.44 0 17.62-10.48 15.65-21.4C463.3 352 375 304 288 304z"
+        fill="none"
+        stroke="#fff"
+        strokeMiterlimit="10"
+        strokeWidth="46"
+      />
+      <path
+        fill="none"
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
+        d="M88 176v112M144 232H32"
+      />
     </svg>
   );
 };

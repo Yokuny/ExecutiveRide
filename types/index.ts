@@ -60,3 +60,28 @@ export interface ActualLocationProps {
   loading: boolean;
   address: string;
 }
+
+export interface ListItem {
+  listItems: {
+    firstAddress: string;
+    secondAddress: string;
+  }[];
+}
+
+export interface ListItemsProps {
+  disabled: boolean;
+}
+
+export interface ListFooterProps {
+  disabled: boolean;
+}
+
+export interface LocationActionsProps {
+  disabled: boolean;
+  data: LocationData;
+  erase: (value: LocationData) => void;
+}
+export interface LocationSearchProps {
+  setLoading: (loading: boolean) => void;
+  setLocation: (location: LocationData) => void;
+}
