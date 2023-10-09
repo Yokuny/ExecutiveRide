@@ -3,7 +3,7 @@ import { PointIcon, WayIcon } from "@/components/icons";
 
 const ABPoint = ({ icon = true }: ABPointProps) => {
   return (
-    <div className="rounded-md bg-gradient-to-r from-blue-600 to-blue-500 h-9 w-12 flex items-center justify-center">
+    <div className="rounded-md text-white bg-gradient-to-r from-blue-600 to-blue-500 h-9 w-12 flex items-center justify-center">
       {icon ? <PointIcon /> : <WayIcon />}
     </div>
   );

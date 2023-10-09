@@ -23,6 +23,114 @@ export const Logo: React.FC<IconSvgProps> = ({
 	</svg>
 );
 
+export const UpIcon: React.FC<IconSvgProps> = ({ size = 12, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
+      <path
+        fill="currentColor"
+        d="M414 321.94L274.22 158.82a24 24 0 00-36.44 0L98 321.94c-13.34 15.57-2.28 39.62 18.22 39.62h279.6c20.5 0 31.56-24.05 18.18-39.62z"
+      />
+    </svg>
+  );
+};
+
+export const DownIcon: React.FC<IconSvgProps> = ({ size = 12, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
+      <path
+        fill="currentColor"
+        d="M98 190.06l139.78 163.12a24 24 0 0036.44 0L414 190.06c13.34-15.57 2.28-39.62-18.22-39.62h-279.6c-20.5 0-31.56 24.05-18.18 39.62z"
+      />
+    </svg>
+  );
+};
+
+export const PlayIcon: React.FC<IconSvgProps> = ({ size = 14, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
+      <path
+        fill="currentColor"
+        d="M133 440a35.37 35.37 0 01-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37 7.46-27.53 19.46-34.33a35.13 35.13 0 0135.77.45l247.85 148.36a36 36 0 010 61l-247.89 148.4A35.5 35.5 0 01133 440z"
+      />
+    </svg>
+  );
+};
+
+export const PauseIcon: React.FC<IconSvgProps> = ({ size = 14, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
+      <path
+        fill="currentColor"
+        d="M208 432h-48a16 16 0 01-16-16V96a16 16 0 0116-16h48a16 16 0 0116 16v320a16 16 0 01-16 16zM352 432h-48a16 16 0 01-16-16V96a16 16 0 0116-16h48a16 16 0 0116 16v320a16 16 0 01-16 16z"
+      />
+    </svg>
+  );
+};
+
+export const ConfirmIcon: React.FC<IconSvgProps> = ({ size = 25, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 512 500" width={size || width} {...props}>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
+        d="M400 352l64-64-64-64"
+      />
+      <path
+        d="M448 288H154c-58.76 0-106-49.33-106-108v-20"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
+      />
+    </svg>
+  );
+};
+
+export const UserIcon: React.FC<IconSvgProps> = ({ size = 19, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
+      <path
+        d="M376 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="40"
+      />
+      <path
+        d="M288 304c-87 0-175.3 48-191.64 138.6-2 10.92 4.21 21.4 15.65 21.4H464c11.44 0 17.62-10.48 15.65-21.4C463.3 352 375 304 288 304z"
+        fill="none"
+        stroke="currentColor"
+        strokeMiterlimit="10"
+        strokeWidth="46"
+      />
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
+        d="M88 176v112M144 232H32"
+      />
+    </svg>
+  );
+};
+
+export const FileIcon: React.FC<IconSvgProps> = ({ size = 15, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 512 500" width={size || width} {...props}>
+      <path
+        fill="currentColor"
+        d="M479.66 268.7l-32-151.81C441.48 83.77 417.68 64 384 64H128c-16.8 0-31 4.69-42.1 13.94s-18.37 22.31-21.58 38.89l-32 151.87A16.65 16.65 0 0032 272v112a64 64 0 0064 64h320a64 64 0 0064-64V272a16.65 16.65 0 00-.34-3.3zm-384-145.4v-.28c3.55-18.43 13.81-27 32.29-27H384c18.61 0 28.87 8.55 32.27 26.91 0 .13.05.26.07.39l26.93 127.88a4 4 0 01-3.92 4.82H320a15.92 15.92 0 00-16 15.82 48 48 0 11-96 0A15.92 15.92 0 00192 256H72.65a4 4 0 01-3.92-4.82z"
+      />
+    </svg>
+  );
+};
+
 export const TrashIcon: React.FC<IconSvgProps> = ({ size = 19, width, height, ...props }) => {
   return (
     <svg height={size || height} viewBox="0 0 512 500" width={size || width} {...props}>
@@ -53,90 +161,15 @@ export const TrashIcon: React.FC<IconSvgProps> = ({ size = 19, width, height, ..
   );
 };
 
-export const UserIcon: React.FC<IconSvgProps> = ({ size = 19, width, height, ...props }) => {
-  return (
-    <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
-      <path
-        d="M376 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
-        fill="none"
-        stroke="#fff"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="40"
-      />
-      <path
-        d="M288 304c-87 0-175.3 48-191.64 138.6-2 10.92 4.21 21.4 15.65 21.4H464c11.44 0 17.62-10.48 15.65-21.4C463.3 352 375 304 288 304z"
-        fill="none"
-        stroke="#fff"
-        strokeMiterlimit="10"
-        strokeWidth="46"
-      />
-      <path
-        fill="none"
-        stroke="#fff"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="32"
-        d="M88 176v112M144 232H32"
-      />
-    </svg>
-  );
-};
-
-export const ConfirmIcon: React.FC<IconSvgProps> = ({ size = 25, width, height, ...props }) => {
-  return (
-    <svg height={size || height} viewBox="0 0 512 500" width={size || width} {...props}>
-      <path
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="32"
-        d="M400 352l64-64-64-64"
-      />
-      <path
-        d="M448 288H154c-58.76 0-106-49.33-106-108v-20"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="32"
-      />
-    </svg>
-  );
-};
-
-export const UpIcon: React.FC<IconSvgProps> = ({ size = 12, width, height, ...props }) => {
-  return (
-    <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
-      <path
-        fill="currentColor"
-        d="M414 321.94L274.22 158.82a24 24 0 00-36.44 0L98 321.94c-13.34 15.57-2.28 39.62 18.22 39.62h279.6c20.5 0 31.56-24.05 18.18-39.62z"
-      />
-    </svg>
-  );
-};
-
-export const DownIcon: React.FC<IconSvgProps> = ({ size = 12, width, height, ...props }) => {
-  return (
-    <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
-      <path
-        fill="currentColor"
-        d="M98 190.06l139.78 163.12a24 24 0 0036.44 0L414 190.06c13.34-15.57 2.28-39.62-18.22-39.62h-279.6c-20.5 0-31.56 24.05-18.18 39.62z"
-      />
-    </svg>
-  );
-};
-
 export const PointIcon: React.FC<IconSvgProps> = ({ size = 17, width, height, ...props }) => {
   return (
     <svg height={size || height} viewBox="0 0 16 16" width={size || width} {...props}>
       <path
-        fill="#fff"
+        fill="currentColor"
         d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"
       />
       <path
-        fill="#fff"
+        fill="currentColor"
         d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"
       />
     </svg>
@@ -146,16 +179,22 @@ export const PointIcon: React.FC<IconSvgProps> = ({ size = 17, width, height, ..
 export const WayIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, ...props }) => {
   return (
     <svg height={size || height} viewBox="0 0 48 48" width={size || width} {...props}>
-      <path fill="none" stroke="#fff" strokeLinecap="round" strokeWidth="2" d="M8.4464,7.6291v6.9622" />
       <path
         fill="none"
-        stroke="#fff"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="2"
+        d="M8.4464,7.6291v6.9622"
+      />
+      <path
+        fill="none"
+        stroke="currentColor"
         strokeLinecap="round"
         strokeWidth="2"
         d="M39.5536,40.2045m0-14.2335V15.422h0A7.7768,7.7768,0,1,0,24,15.422V32.578a7.7768,7.7768,0,1,1-15.5536,0V28.8248"
       />
-      <ellipse fill="#fff" cx="8.4464" cy="21.7081" rx="3.9464" ry="3.9546" />
-      <ellipse fill="#fff" cx="39.5536" cy="26.0877" rx="3.9464" ry="3.9546" />
+      <ellipse fill="currentColor" cx="8.4464" cy="21.7081" rx="3.9464" ry="3.9546" />
+      <ellipse fill="currentColor" cx="39.5536" cy="26.0877" rx="3.9464" ry="3.9546" />
     </svg>
   );
 };
@@ -173,7 +212,7 @@ export const GithubIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, .
   );
 };
 
-export const LocationIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, ...props }) => {
+export const TrackIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, ...props }) => {
   return (
     <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
       <path
@@ -198,6 +237,18 @@ export const LocationIcon: React.FC<IconSvgProps> = ({ size = 24, width, height,
         strokeLinejoin="round"
         strokeWidth="48"
         d="M416 256h40M56 256h40"
+      />
+    </svg>
+  );
+};
+
+export const LocationIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
+      <path
+        fill="currentColor"
+        stroke="none"
+        d="M256 32C167.67 32 96 96.51 96 176c0 128 160 304 160 304s160-176 160-304c0-79.49-71.67-144-160-144zm0 224a64 64 0 1164-64 64.07 64.07 0 01-64 64z"
       />
     </svg>
   );

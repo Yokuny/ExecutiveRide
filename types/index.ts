@@ -3,6 +3,13 @@ import { SVGProps, Dispatch, SetStateAction } from "react";
 import { ThemeProviderProps } from "next-themes/dist/types";
 import { SwitchProps } from "@nextui-org/switch";
 
+export interface LocationData {
+  address: string;
+  latitude: number;
+  longitude: number;
+  passenger?: string;
+}
+
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;
 };
@@ -19,12 +26,6 @@ export interface ProvidersProps {
 
 export interface ChildrenProps {
   children: React.ReactNode;
-}
-
-export interface LocationData {
-  address: string;
-  latitude: number;
-  longitude: number;
 }
 
 export interface ErrorProps {

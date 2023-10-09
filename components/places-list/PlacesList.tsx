@@ -16,7 +16,7 @@ const PlacesList = () => {
   }, [location]);
 
   return (
-    <Card className="w-full flex items-center max-w-4xl py-2 md:p-2 ">
+    <Card className="w-full flex items-center max-w-4xl py-2 md:p-2" radius="sm">
       <ListItems disabled={disabled} />
       <ListFooter disabled={disabled} />
     </Card>

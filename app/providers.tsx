@@ -1,5 +1,4 @@
 "use client";
-
 import * as React from "react";
 import { NextUIProvider } from "@nextui-org/system";
 import { ThemeProvider } from "next-themes";

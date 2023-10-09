@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import type { LocationData, LocationSearchProps } from "@/types";
-import { SearchIcon, LocationIcon } from "../icons";
+import { SearchIcon, TrackIcon } from "../icons";
 import { getActualLocation, searchAddress } from "../../utils/getActualLocation";
 
 const LocationSearch = ({ setLoading, setLocation }: LocationSearchProps) => {
@@ -75,7 +75,7 @@ const LocationSearch = ({ setLoading, setLocation }: LocationSearchProps) => {
         size="md"
         radius="sm"
         aria-label="Geo location">
-        <LocationIcon />
+        <TrackIcon />
       </Button>
     </div>
   );
