@@ -8,7 +8,7 @@ const RunData = () => {
 
   return (
     <Button
-      className="sm:h-12 h-14 sm:px-5 px-2 min-w-fit bg-default-100 sm:text-sm text-xs sm:flex-row-reverse flex-col items-center sm:gap-2 gap-1"
+      className="sm:h-12 h-14 sm:px-5 px-2 md:w-1/5 min-w-fit bg-default-100 sm:text-sm text-xs sm:flex-row-reverse flex-col items-center sm:gap-2 gap-1"
       onClick={handlePause}>
       <span>Registro</span>
       <FileIcon />
