@@ -1,18 +1,24 @@
 "use client";
+import { useGlobalContext } from "@/app/context";
+import { useEffect, useState } from "react";
 import { Card } from "@nextui-org/card";
-import ElapsedTime from "./ElapsedTime";
-import Distance from "./Distance";
-import RunData from "./RunData";
-import Passenger from "./Passenger";
+import RaceInfoMenuItems from "./RaceInfoMenuItems";
+import MenuItemSkeleton from "./MenuItemSkeleton";
 
 const RaceInfo = () => {
+  const { location } = useGlobalContext();
+  const [disabled, setDisabled] = useState<boolean>(true);
+
+  useEffect(() => {
+    if (location.length >= 1) {
+      setDisabled(false);
+    }
+  }, [location]);
+
   return (
     <Card className="w-full overflow-scroll max-w-4xl p-2 md:h-16 h-auto flex items-center" radius="sm">
       <div className="w-5/6 flex items-center sm:gap-0 gap-2 justify-evenly ">
-        <ElapsedTime />
-        <Distance />
-        <RunData />
-        <Passenger />
+        {disabled ? <MenuItemSkeleton /> : <RaceInfoMenuItems />}
       </div>
     </Card>
   );
