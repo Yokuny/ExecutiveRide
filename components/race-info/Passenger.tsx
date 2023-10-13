@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useGlobalContext } from "@/app/context";
-import { Button } from "@nextui-org/button";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@nextui-org/modal";
+import { Button } from "@nextui-org/button";
 import { ConfirmIcon, UserIcon } from "../icons";
-import { Input } from "@nextui-org/input";
+import PassagerBody from "./PassengerBody";
 
 const Passager = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const { currPassager, location, setLocation } = useGlobalContext();
+  const { currPassager } = useGlobalContext();
   const [passager, setPassager] = useState("-");
 
   useEffect(() => {
@@ -27,15 +27,7 @@ const Passager = () => {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">Lista de passageiros</ModalHeader>
-              <ModalBody className="flex gap-1">
-                <Input
-                  className="w-full h-full mb-3"
-                  onChange={() => {}}
-                  size="lg"
-                  radius="sm"
-                  placeholder="Digite o nome"
-                />
-              </ModalBody>
+              <PassagerBody />
               <ModalFooter>
                 <Button
                   className="hover:opacity-90 bg-default-200 text-lg rounded-md"

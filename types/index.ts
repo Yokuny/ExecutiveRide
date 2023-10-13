@@ -8,6 +8,7 @@ export interface LocationData {
   latitude: number;
   longitude: number;
   passenger?: string;
+  creatAt: Date;
 }
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
@@ -89,4 +90,14 @@ export interface LocationActionsProps {
 export interface LocationSearchProps {
   setLoading: (loading: boolean) => void;
   setLocation: (location: LocationData) => void;
+}
+
+export interface passengerData {
+  address: string;
+  passenger: string;
+}
+
+export interface PassengerItemProps {
+  data: passengerData;
+  index: number;
 }

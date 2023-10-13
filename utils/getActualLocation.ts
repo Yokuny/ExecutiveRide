@@ -31,6 +31,7 @@ const locationFactory = (locationData: any): LocationData => {
       address: locationData.formatted_address,
       latitude: locationData.geometry.location.lat,
       longitude: locationData.geometry.location.lng,
+      creatAt: new Date(),
     };
     return addressAndGeolocation;
   }

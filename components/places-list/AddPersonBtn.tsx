@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useGlobalContext } from "@/app/context";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
@@ -9,6 +9,7 @@ import { ConfirmIcon } from "../icons";
 const AddPersonBtn = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const { location, setLocation, setCurrPassager } = useGlobalContext();
+  const [disabled, setDisabled] = useState(true);
   const [passager, setPassager] = useState("");
 
   const putPassagerName = () => {
@@ -20,7 +21,7 @@ const AddPersonBtn = () => {
   };
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value === "" || e.target.value.length < 6 || e.target.value.length > 26) {
+    if (e.target.value === "" || e.target.value.length < 5 || e.target.value.length > 26) {
       e.target.style.borderBottom = "1px solid crimson";
       setPassager("");
     } else {
@@ -29,10 +30,19 @@ const AddPersonBtn = () => {
     }
   };
 
+  useEffect(() => {
+    if (location.length % 2 !== 0) {
+      setDisabled(true);
+    } else {
+      setDisabled(false);
+    }
+  }, [location]);
+
   return (
     <>
       <Button
         className="hover:opacity-90 w-1/6 text-white"
+        isDisabled={disabled}
         onPress={onOpen}
         color="success"
         size="sm"
