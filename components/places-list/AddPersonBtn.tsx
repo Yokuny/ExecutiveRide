@@ -1,11 +1,34 @@
+import { useState } from "react";
+import { useGlobalContext } from "@/app/context";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import { UserIcon } from "@/components/icons";
-import { ConfirmIcon, TrashIcon } from "../icons";
+import { ConfirmIcon } from "../icons";
 
 const AddPersonBtn = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { location, setLocation, setCurrPassager } = useGlobalContext();
+  const [passager, setPassager] = useState("");
+
+  const putPassagerName = () => {
+    const allLocationData = location;
+    allLocationData[location.length - 1].passenger = passager;
+    setLocation(allLocationData);
+
+    setCurrPassager(passager);
+  };
+
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.value === "" || e.target.value.length < 6 || e.target.value.length > 26) {
+      e.target.style.borderBottom = "1px solid crimson";
+      setPassager("");
+    } else {
+      e.target.style.borderBottom = "1px solid yellowgreen";
+      setPassager(e.target.value);
+    }
+  };
+
   return (
     <>
       <Button
@@ -22,9 +45,16 @@ const AddPersonBtn = () => {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">Adicionar passageiro</ModalHeader>
-              <ModalBody className="flex gap-2">
-                <Input className="w-full h-full" size="lg" radius="sm" placeholder="Digite o nome" />
-                <p className="pl-1 text-sm">&#9654; Adicione os passageiros em sequencia</p>
+              <ModalBody className="flex gap-1">
+                <Input
+                  className="w-full h-full mb-3"
+                  onChange={handleInput}
+                  size="lg"
+                  radius="sm"
+                  placeholder="Digite o nome"
+                />
+                <p className="pl-1 text-sm">&#9654; Adicione o passageiro atual</p>
+                <p className="pl-1 text-sm">&#9654; Pode ser alterado posteriormente</p>
               </ModalBody>
               <ModalFooter>
                 <Button
@@ -36,7 +66,10 @@ const AddPersonBtn = () => {
                 </Button>
                 <Button
                   className="hover:opacity-90 w-1/4 rounded-md"
-                  onPress={onClose}
+                  onPress={() => {
+                    putPassagerName();
+                    onClose();
+                  }}
                   color="primary"
                   size="sm"
                   aria-label="Confirm person">

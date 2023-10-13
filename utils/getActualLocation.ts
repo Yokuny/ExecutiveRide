@@ -1,8 +1,15 @@
 import { LocationData } from "../types/index";
 
+interface Geolocation {
+  coords: {
+    latitude: number;
+    longitude: number;
+  };
+}
+
 const locationByLatLon = async (latitude: number, longitude: number) => {
   const response = await fetch(
-    `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=AIzaSyAq9L4mRG9lPlDrplm2iHBgTg1HAQamiDU`
+    `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}`
   );
   const data = await response.json();
   return data.results[0];
@@ -10,7 +17,7 @@ const locationByLatLon = async (latitude: number, longitude: number) => {
 
 const locationByAddres = async (address: string) => {
   const response = await fetch(
-    `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyAq9L4mRG9lPlDrplm2iHBgTg1HAQamiDU`
+    `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}`
   );
   const data = await response.json();
   return data.results[0];
@@ -45,9 +52,3 @@ export const searchAddress = async (address: string): Promise<LocationData> => {
   return locationFactory(locationData);
 };
 
-interface Geolocation {
-  coords: {
-    latitude: number;
-    longitude: number;
-  };
-}

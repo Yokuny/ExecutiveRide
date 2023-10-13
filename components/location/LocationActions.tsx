@@ -4,7 +4,7 @@ import type { LocationData, LocationActionsProps } from "@/types";
 import { TrashIcon, ConfirmIcon } from "../icons";
 
 const LocationActions = ({ erase, data, disabled }: LocationActionsProps) => {
-  const { location, setLocation } = useGlobalContext();
+  const { location, setLocation, creatAt, setCreatAt } = useGlobalContext();
 
   const saveLocation = () => {
     setLocation([...location, data]);
@@ -13,11 +13,16 @@ const LocationActions = ({ erase, data, disabled }: LocationActionsProps) => {
     const locations = localStorage.getItem("actualLocation");
     if (!locations) {
       localStorage.setItem("actualLocation", JSON.stringify([data]));
+      localStorage.setItem("creatAt", JSON.stringify(new Date()));
     } else if (typeof locations === "string") {
       const storedLocations = JSON.parse(locations);
 
       const newLocations = [...storedLocations, data];
       localStorage.setItem("actualLocation", JSON.stringify(newLocations));
+    }
+
+    if (creatAt === null) {
+      setCreatAt(new Date());
     }
   };
 

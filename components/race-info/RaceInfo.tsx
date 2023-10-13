@@ -17,7 +17,7 @@ const RaceInfo = () => {
 
   return (
     <Card className="w-full overflow-scroll max-w-4xl p-2 md:h-16 h-auto flex items-center" radius="sm">
-      <div className="w-5/6 flex items-center sm:gap-0 gap-2 justify-evenly ">
+      <div className="w-5/6 flex items-center gap-2 justify-evenly ">
         {disabled ? <MenuItemSkeleton /> : <RaceInfoMenuItems />}
       </div>
     </Card>
