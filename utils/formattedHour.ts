@@ -10,15 +10,15 @@ const extractData = (format: string, data: Date) => {
   let formattedHour;
   switch (format) {
     case "hour":
-      formattedHour = `${hour}:${minute}`;
+      formattedHour = `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`;
       break;
     case "hourDate":
-      formattedHour = `${date.getDate()}/${date.getMonth() + 1} ${hour}:${minute}`;
+      formattedHour = `${date.getDate()}/${date.getMonth() + 1} 
+      ${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`;
       break;
     case "full":
-      formattedHour = `${date.getDate()}/${
-        date.getMonth() + 1
-      }/${date.getFullYear()} ${hour}:${minute}:${second}`;
+      formattedHour = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} 
+      ${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}:${String(second).padStart(2, "0")}`;
       break;
     default:
       formattedHour = `${date.getDate()}/${date.getMonth() + 1} ${hour}:${minute}`;
