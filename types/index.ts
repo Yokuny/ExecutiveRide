@@ -98,6 +98,11 @@ export interface passengerData {
 }
 
 export interface PassengerItemProps {
-  data: passengerData;
+  data: LocationData;
   index: number;
+}
+
+export interface RacingDataItemProps {
+  firstPoint: LocationData;
+  data: LocationData;
 }

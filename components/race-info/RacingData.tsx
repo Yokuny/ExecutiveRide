@@ -1,18 +1,12 @@
-import { useEffect, useState } from "react";
-import { useGlobalContext } from "@/app/context";
 import { Modal, ModalContent, ModalHeader, ModalFooter, useDisclosure } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
-import { ConfirmIcon, UserIcon } from "../icons";
-import PassagerBody from "./PassengerBody";
+import { ConfirmIcon, FileIcon } from "../icons";
+import RacingDataBody from "./RacingDataBody";
+import { useGlobalContext } from "@/app/context";
 
-const Passager = () => {
+const RacingData = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const { currPassager, location } = useGlobalContext();
-  const [passager, setPassager] = useState("-");
-
-  useEffect(() => {
-    setPassager(currPassager);
-  }, [currPassager]);
 
   return (
     <>
@@ -21,21 +15,19 @@ const Passager = () => {
         onClick={() => {
           if (location.length % 2 === 0) onOpen();
         }}>
-        <span className="whitespace-nowrap overflow-hidden md:max-w-none max-w-[76px]">{passager}</span>
-        <UserIcon size={16} />
+        <span>Registro</span>
+        <FileIcon />
       </Button>
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} radius="sm">
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Lista de passageiros</ModalHeader>
-              <PassagerBody />
+              <ModalHeader className="flex flex-col gap-1">Informações</ModalHeader>
+              <RacingDataBody />
               <ModalFooter>
                 <Button
                   className="hover:opacity-90 w-1/4 rounded-md"
-                  onPress={() => {
-                    onClose();
-                  }}
+                  onPress={onClose}
                   color="primary"
                   size="sm"
                   aria-label="Confirm person">
@@ -50,4 +42,4 @@ const Passager = () => {
   );
 };
 
-export default Passager;
+export default RacingData;

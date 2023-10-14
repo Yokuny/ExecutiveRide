@@ -1,17 +1,17 @@
-import { useGlobalContext } from "@/app/context";
 import { ModalBody } from "@nextui-org/modal";
-import PassengerItem from "./PassengerItem";
+import { useGlobalContext } from "@/app/context";
+import RacingDataItem from "./RacingDataItem";
 
-const PassagerBody = () => {
+const RacingDataBody = () => {
   const { location } = useGlobalContext();
 
   return (
-    <ModalBody className="flex gap-4">
+    <ModalBody className="flex gap-6">
       {location.map((locationInfo, index) => (
         <>
           {index % 2 === 1 && (
             <div className="flex flex-col gap-1" key={index}>
-              <PassengerItem data={locationInfo} index={index} />
+              <RacingDataItem firstPoint={location[index - 1]} data={locationInfo} />
             </div>
           )}
         </>
@@ -19,5 +19,4 @@ const PassagerBody = () => {
     </ModalBody>
   );
 };
-
-export default PassagerBody;
+export default RacingDataBody;

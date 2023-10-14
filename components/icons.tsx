@@ -73,17 +73,17 @@ export const ClockIcon: React.FC<IconSvgProps> = ({ size = 18, width, height, ..
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="38"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="38"
         d="M256 232v-80"
       />
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="78"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="78"
         d="M256 88V72M132 132l-12-12"
       />
       <circle
@@ -92,15 +92,15 @@ export const ClockIcon: React.FC<IconSvgProps> = ({ size = 18, width, height, ..
         r="32"
         fill="none"
         stroke="currentColor"
-        stroke-miterlimit="10"
-        stroke-width="32"
+        strokeMiterlimit="10"
+        strokeWidth="32"
       />
       <path
         d="M256 96a176 176 0 10176 176A176 176 0 00256 96z"
         fill="none"
         stroke="currentColor"
-        stroke-miterlimit="10"
-        stroke-width="40"
+        strokeMiterlimit="10"
+        strokeWidth="40"
       />
     </svg>
   );
@@ -211,6 +211,68 @@ export const PointIcon: React.FC<IconSvgProps> = ({ size = 17, width, height, ..
         fill="currentColor"
         d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"
       />
+    </svg>
+  );
+};
+
+export const CalenderNumberIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
+      <rect
+        x="48"
+        y="80"
+        width="416"
+        height="384"
+        rx="48"
+        fill="none"
+        stroke="currentColor"
+        strokeLinejoin="round"
+        strokeWidth="32"
+      />
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="38"
+        d="M128 48v32M384 48v32M464 160H48M304 260l43.42-32H352v168M191.87 306.63c9.11 0 25.79-4.28 36.72-15.47a37.9 37.9 0 0011.13-27.26c0-26.12-22.59-39.9-47.89-39.9-21.4 0-33.52 11.61-37.85 18.93M149 374.16c4.88 8.27 19.71 25.84 43.88 25.84 28.59 0 52.12-15.94 52.12-43.82 0-12.62-3.66-24-11.58-32.07-12.36-12.64-31.25-17.48-41.55-17.48"
+      />
+    </svg>
+  );
+};
+
+export const CalenderIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 512 512" width={size || width} {...props}>
+      <rect
+        fill="none"
+        stroke="currentColor"
+        stroke-linejoin="round"
+        stroke-width="32"
+        x="48"
+        y="80"
+        width="416"
+        height="384"
+        rx="48"
+      />
+      <circle fill="currentColor" cx="296" cy="232" r="24" />
+      <circle fill="currentColor" cx="376" cy="232" r="24" />
+      <circle fill="currentColor" cx="296" cy="312" r="24" />
+      <circle fill="currentColor" cx="376" cy="312" r="24" />
+      <circle fill="currentColor" cx="136" cy="312" r="24" />
+      <circle fill="currentColor" cx="216" cy="312" r="24" />
+      <circle fill="currentColor" cx="136" cy="392" r="24" />
+      <circle fill="currentColor" cx="216" cy="392" r="24" />
+      <circle fill="currentColor" cx="296" cy="392" r="24" />
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linejoin="round"
+        stroke-width="52"
+        stroke-linecap="round"
+        d="M128 48v32M384 48v32"
+      />
+      <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M464 160H48" />
     </svg>
   );
 };

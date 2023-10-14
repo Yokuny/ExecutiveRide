@@ -1,6 +1,6 @@
 import ElapsedTime from "./ElapsedTime";
 import Distance from "./Distance";
-import RunData from "./RunData";
+import RacingData from "./RacingData";
 import Passenger from "./Passenger";
 
 const RaceInfoMenuItems = () => {
@@ -8,7 +8,7 @@ const RaceInfoMenuItems = () => {
     <>
       <ElapsedTime />
       <Distance />
-      <RunData />
+      <RacingData />
       <Passenger />
     </>
   );
