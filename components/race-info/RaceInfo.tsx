@@ -17,6 +17,7 @@ const RaceInfo = () => {
 
   return (
     <Card className="w-full overflow-scroll max-w-4xl p-2 md:h-16 h-auto flex items-center" radius="sm">
+      {disabled ? <div className="p-2 pt-0 text-default-500">Pesquise sua localização</div> : <></>}
       <div className="md:w-5/6 w-full flex gap-2 items-center md:justify-evenly mx-2">
         {disabled ? <MenuItemSkeleton /> : <RaceInfoMenuItems />}
       </div>

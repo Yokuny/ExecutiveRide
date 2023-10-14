@@ -1,10 +1,12 @@
+"use client";
 import { Button } from "@nextui-org/button";
 import { useGlobalContext } from "@/app/context";
 import type { LocationData, LocationActionsProps } from "@/types";
 import { TrashIcon, ConfirmIcon } from "../icons";
+import { useEffect } from "react";
 
 const LocationActions = ({ erase, data, disabled }: LocationActionsProps) => {
-  const { location, setLocation, creatAt, setCreatAt } = useGlobalContext();
+  const { location, setLocation, creatAt, setDate } = useGlobalContext();
 
   const saveLocation = () => {
     setLocation([...location, data]);
@@ -20,11 +22,13 @@ const LocationActions = ({ erase, data, disabled }: LocationActionsProps) => {
       const newLocations = [...storedLocations, data];
       localStorage.setItem("actualLocation", JSON.stringify(newLocations));
     }
-
-    if (creatAt === null) {
-      setCreatAt(new Date());
-    }
   };
+
+  useEffect(() => {
+    if (creatAt === null) {
+      setDate;
+    }
+  }, [location, creatAt, setDate]);
 
   return (
     <div className="w-3/4 flex justify-center items-center gap-4">

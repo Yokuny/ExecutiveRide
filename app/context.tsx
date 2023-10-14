@@ -5,8 +5,8 @@ import { LocationData, ContextProps, ChildrenProps } from "@/types";
 const GlobalContext = createContext<ContextProps>({
   location: [] as LocationData[],
   setLocation: () => {},
-  creatAt: new Date(),
-  setCreatAt: () => {},
+  creatAt: null,
+  setDate: () => {},
   currPassager: "-",
   setCurrPassager: () => {},
 });
@@ -14,11 +14,16 @@ const GlobalContext = createContext<ContextProps>({
 export const GlobalProvider = ({ children }: ChildrenProps) => {
   const [location, setLocation] = useState([] as LocationData[]);
   const [creatAt, setCreatAt] = useState(new Date());
+
+  const setDate = () => {
+    setCreatAt(new Date());
+  };
+
   const [currPassager, setCurrPassager] = useState("-");
 
   return (
     <GlobalContext.Provider
-      value={{ location, setLocation, creatAt, setCreatAt, currPassager, setCurrPassager }}>
+      value={{ location, setLocation, creatAt, setDate, currPassager, setCurrPassager }}>
       {children}
     </GlobalContext.Provider>
   );
