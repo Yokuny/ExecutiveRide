@@ -37,7 +37,7 @@ export interface ErrorProps {
 export interface ContextProps {
   location: LocationData[];
   setLocation: Dispatch<SetStateAction<LocationData[]>>;
-  creatAt: Date | null;
+  creatAt: Date;
   setDate: {};
   currPassager: string;
   setCurrPassager: Dispatch<SetStateAction<string>>;

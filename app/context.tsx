@@ -5,7 +5,7 @@ import { LocationData, ContextProps, ChildrenProps } from "@/types";
 const GlobalContext = createContext<ContextProps>({
   location: [] as LocationData[],
   setLocation: () => {},
-  creatAt: null,
+  creatAt: new Date(),
   setDate: () => {},
   currPassager: "-",
   setCurrPassager: () => {},
