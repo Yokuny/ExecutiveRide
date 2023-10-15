@@ -1,12 +1,13 @@
 import "@/styles/globals.css";
 import { Metadata } from "next";
+import clsx from "clsx";
+
 import { GlobalProvider } from "./context";
+import { Providers } from "./providers";
+import Navbar from "@/components/navbar/navbar";
+import type { ChildrenProps } from "@/types";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Providers } from "./providers";
-import { Navbar } from "@/components/navbar";
-import { ChildrenProps } from "@/types";
-import clsx from "clsx";
 
 export const metadata: Metadata = {
   title: {
@@ -19,9 +20,9 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
     shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    apple: "/favicon.svg",
   },
 };
 

@@ -1,4 +1,4 @@
-import { LocationData } from "../types/index";
+import type { LocationData } from "@/types";
 
 interface Geolocation {
   coords: {
@@ -52,4 +52,3 @@ export const searchAddress = async (address: string): Promise<LocationData> => {
   const locationData = await locationByAddres(address);
   return locationFactory(locationData);
 };
-

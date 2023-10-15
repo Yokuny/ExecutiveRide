@@ -1,5 +1,5 @@
 // `https://maps.googleapis.com/maps/api/distancematrix/json?destinations=${destination}&origins=${origin}&key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}`
-import { LocationData } from "../types/index";
+import { LocationData } from "@/types";
 
 const distanceMatrix = async (origin: string, destination: string) => {
   return "asd";

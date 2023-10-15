@@ -1,26 +1,15 @@
 import * as React from "react";
 import { IconSvgProps } from "@/types";
 
-export const Logo: React.FC<IconSvgProps> = ({
-	size = 36,
-	width,
-	height,
-	...props
-}) => (
-	<svg
-		fill="none"
-		height={size || height}
-		viewBox="0 0 32 32"
-		width={size || width}
-		{...props}
-	>
-		<path
-			clipRule="evenodd"
-			d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-			fill="currentColor"
-			fillRule="evenodd"
-		/>
-	</svg>
+export const LogoImg: React.FC<IconSvgProps> = ({ size = 36, width, height, ...props }) => (
+  <svg fill="none" height={size || height} viewBox="0 0 32 32" width={size || width} {...props}>
+    <path
+      clipRule="evenodd"
+      d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
+      fill="currentColor"
+      fillRule="evenodd"
+    />
+  </svg>
 );
 
 export const UpIcon: React.FC<IconSvgProps> = ({ size = 12, width, height, ...props }) => {
@@ -350,6 +339,19 @@ export const LocationIcon: React.FC<IconSvgProps> = ({ size = 24, width, height,
         fill="currentColor"
         stroke="none"
         d="M256 32C167.67 32 96 96.51 96 176c0 128 160 304 160 304s160-176 160-304c0-79.49-71.67-144-160-144zm0 224a64 64 0 1164-64 64.07 64.07 0 01-64 64z"
+      />
+    </svg>
+  );
+};
+
+export const LogOutIcon: React.FC<IconSvgProps> = ({ size = 20, width, height, ...props }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 24 24" width={size || width} {...props}>
+      <path
+        fill="currentColor"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"
       />
     </svg>
   );

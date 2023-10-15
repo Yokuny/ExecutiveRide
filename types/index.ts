@@ -43,6 +43,20 @@ export interface ContextProps {
   setCurrPassager: Dispatch<SetStateAction<string>>;
 }
 
+export interface RoutesType {
+  label: string;
+  href: string;
+};
+
+export interface MenuProps {
+  routes: RoutesType[];
+  loggedIn: boolean;
+};
+
+export interface TabsProps {
+  routes: RoutesType[];
+};
+
 export interface PlaceItemProps {
   firstAddress: string;
   secondAddress: string;
@@ -106,3 +120,19 @@ export interface RacingDataItemProps {
   firstPoint: LocationData;
   data: LocationData;
 }
+
+export interface RegisterInputsProps {
+  nameErr: boolean;
+  emailErr: boolean;
+  passwordErr: boolean;
+  nameValidation: (value: string) => boolean;
+  emailValidation: (value: string) => boolean;
+  passwordValidation: (value: string) => boolean;
+};
+
+export interface LoginInputsProps {
+  emailErr: boolean;
+  passwordErr: boolean;
+  emailValidation: (value: string) => boolean;
+  passwordValidation: (value: string) => boolean;
+};
