@@ -63,8 +63,8 @@ const AddPersonBtn = () => {
                   radius="sm"
                   placeholder="Digite o nome"
                 />
-                <p className="pl-1 text-sm">&#9654; Adicione o passageiro atual</p>
-                <p className="pl-1 text-sm">&#9654; Pode ser alterado posteriormente</p>
+                <p className="pl-1 text-sm">Adicione o passageiro atual</p>
+                <p className="pl-1 text-sm">Pode ser alterado posteriormente</p>
               </ModalBody>
               <ModalFooter>
                 <Button

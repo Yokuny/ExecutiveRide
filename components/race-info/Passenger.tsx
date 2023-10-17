@@ -5,7 +5,7 @@ import { Button } from "@nextui-org/button";
 import { ConfirmIcon, UserIcon } from "../icons";
 import PassagerBody from "./PassengerBody";
 
-const Passager = () => {
+const Passenger = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const { currPassager, location } = useGlobalContext();
   const [passager, setPassager] = useState("-");
@@ -50,4 +50,4 @@ const Passager = () => {
   );
 };
 
-export default Passager;
+export default Passenger;

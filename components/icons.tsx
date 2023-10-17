@@ -236,8 +236,8 @@ export const CalenderIcon: React.FC<IconSvgProps> = ({ size = 24, width, height,
       <rect
         fill="none"
         stroke="currentColor"
-        stroke-linejoin="round"
-        stroke-width="32"
+        strokeLinejoin="round"
+        stroke-Width="32"
         x="48"
         y="80"
         width="416"
@@ -256,9 +256,9 @@ export const CalenderIcon: React.FC<IconSvgProps> = ({ size = 24, width, height,
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linejoin="round"
-        stroke-width="52"
-        stroke-linecap="round"
+        strokeLinejoin="round"
+        strokeWidth="52"
+        strokeLinecap="round"
         d="M128 48v32M384 48v32"
       />
       <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M464 160H48" />

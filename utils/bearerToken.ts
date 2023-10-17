@@ -2,8 +2,10 @@ import Cookie from "js-cookie";
 
 const token = Cookie.get("auth_token");
 
-export const bearerToken = {
+const bearerToken = {
   headers: {
     Authorization: `Bearer ${token}`,
   },
 };
+
+export default bearerToken;

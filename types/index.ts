@@ -128,7 +128,7 @@ export interface RegisterInputsProps {
   nameValidation: (value: string) => boolean;
   emailValidation: (value: string) => boolean;
   passwordValidation: (value: string) => boolean;
-};
+}
 
 export interface LoginInputsProps {
   emailErr: boolean;

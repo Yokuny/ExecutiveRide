@@ -24,31 +24,38 @@ const LoginLogout = () => {
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
-  async function handleSignin() {
-    if (!emailValidation(email) || !passwordValidation(password)) return;
-    Cookie.set("auth_token", "token_falsa_de_teste");
-    alert(`name:${name} email:${email} pass:${password}\n token:${Cookie.get("auth_token")}`);
-    router.push("/app");
-    // try {
-    //   const res = await axios.post(`${API}/sign-in`, { email, password });
-    //   Cookie.set("auth_token", res.data.token);
-    //   router.push("/app");
-    // } catch (err) {
-    //   setEmailError(true);
-    //   setPasswordError(true);
-    // }
-  }
-  async function handleSignup() {
-    if (!emailValidation(email) || !passwordValidation(password) || !nameValidation(name)) return;
-    alert(`${name} ${email} ${password}`);
+  const handleSignin = async () => {
+    if (!emailValidation(email) || !passwordValidation(password)) {
+      setEmailError(true);
+      setPasswordError(true);
+      return;
+    }
     try {
-      await axios.post(`${API}/sign-up`, { name, email, password });
-      alert("Usuário criado com sucesso!");
+      const res = await axios.post(`${API}/user/signin`, { email, password });
+      Cookie.set("auth_token", res.data.token);
+      alert(JSON.stringify(res.data, null, 2));
+      router.push("/app");
     } catch (err) {
       setEmailError(true);
       setPasswordError(true);
     }
-  }
+  };
+  const handleSignup = async () => {
+    if (!emailValidation(email) || !passwordValidation(password) || !nameValidation(name)) {
+      setNameErr(true);
+      setEmailError(true);
+      setPasswordError(true);
+      return;
+    }
+    try {
+      await axios.post(`${API}/user/signup`, { name, email, password });
+      setSelected("Entrar");
+    } catch (err) {
+      setNameErr(true);
+      setEmailError(true);
+      setPasswordError(true);
+    }
+  };
   // data validation
   const emailValidation = (value: string) => {
     if (emailRegex.test(value)) {

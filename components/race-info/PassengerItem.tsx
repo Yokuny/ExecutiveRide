@@ -5,8 +5,8 @@ import { LocationIcon } from "../icons";
 import type { PassengerItemProps } from "@/types";
 
 const PassengerItem = ({ data, index }: PassengerItemProps) => {
-  const [passenger, setPassenger] = useState(data.passenger);
   const { location, setLocation } = useGlobalContext();
+  const [passenger, setPassenger] = useState(data.passenger);
 
   const handlePassengerName = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value.length > 26) return;
@@ -26,7 +26,7 @@ const PassengerItem = ({ data, index }: PassengerItemProps) => {
         className="text-lg"
         radius="sm"
         onChange={handlePassengerName}
-        value={passenger}
+        value={passenger || ""}
         endContent={
           <div className="pointer-events-none flex items-center">
             <span className="text-default-400 text-small">Passageiro</span>

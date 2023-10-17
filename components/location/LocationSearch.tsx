@@ -7,6 +7,7 @@ import { getActualLocation, searchAddress } from "../../utils/getActualLocation"
 
 const LocationSearch = ({ setLoading, setLocation }: LocationSearchProps) => {
   const [address, setAddress] = useState("");
+  const [inputValue, setInputValue] = useState("");
 
   const handleGeoLocation = async () => {
     try {
@@ -20,12 +21,14 @@ const LocationSearch = ({ setLoading, setLocation }: LocationSearchProps) => {
     try {
       setLocation(await searchAddress(address));
     } finally {
+      setInputValue("");
       setAddress("");
       setLoading(false);
     }
   };
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
     if (e.target.value === "" || e.target.value.length < 6) {
       setLocation({} as LocationData);
       setLoading(false);
@@ -44,6 +47,7 @@ const LocationSearch = ({ setLoading, setLocation }: LocationSearchProps) => {
       <form className="w-full h-full flex items-center rounded-lg overflow-hidden bg-default-100 hover:bg-default-200">
         <Input
           className="w-full h-full"
+          value={inputValue}
           onChange={handleInput}
           size="lg"
           radius="none"
