@@ -1,4 +1,5 @@
 import { Skeleton } from "@nextui-org/skeleton";
+
 const MenuItemSkeleton = () => {
   return (
     <>

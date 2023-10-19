@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Button } from "@nextui-org/button";
 import { useGlobalContext } from "@/app/context";
 import formatTime from "@/utils/formatTime";
+
+import { Button } from "@nextui-org/button";
 import { ClockIcon } from "../icons";
 
 const ElapsedTime = () => {

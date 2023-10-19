@@ -3,14 +3,14 @@ import Cookie from "js-cookie";
 import axios from "axios";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { emailRegex, passwordRegex, titleRegex } from "@/utils/regex";
+
 import { Card, CardBody } from "@nextui-org/card";
 import { Button } from "@nextui-org/button";
-import { Tab, Tabs } from "@nextui-org/tabs";
 import { Link } from "@nextui-org/link";
-
+import { Tab, Tabs } from "@nextui-org/tabs";
 import LoginInputs from "./LoginInputs";
 import RegisterInputs from "./RegisterInputs";
-import { emailRegex, passwordRegex, titleRegex } from "@/utils/regex";
 
 const LoginLogout = () => {
   const router = useRouter();

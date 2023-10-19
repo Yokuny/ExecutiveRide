@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { useGlobalContext } from "@/app/context";
+import type { ListItem, DisabledProps } from "@/types";
+
 import { CardBody } from "@nextui-org/card";
-import type { ListItem, ListItemsProps } from "@/types";
 import PlaceItem from "./PlaceItem";
 import ListItemsSkeleton from "./ListItemsSkeleton";
 
-const ListItems = ({ disabled }: ListItemsProps) => {
+const ListItems = ({ disabled }: DisabledProps) => {
   const { location } = useGlobalContext();
   const [places, setPlaces] = useState<ListItem["listItems"]>([]);
 

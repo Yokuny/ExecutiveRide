@@ -1,11 +1,11 @@
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import clsx from "clsx";
-
 import { GlobalProvider } from "./context";
 import { Providers } from "./providers";
-import Navbar from "@/components/navbar/navbar";
 import type { ChildrenProps } from "@/types";
+
+import Navbar from "@/components/navbar/navbar";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 

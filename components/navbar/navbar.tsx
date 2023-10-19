@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Navbar as NextUINavbar, NavbarContent } from "@nextui-org/navbar";
 import { usePathname } from "next/navigation";
 
+import { Navbar as NextUINavbar, NavbarContent } from "@nextui-org/navbar";
 import Logo from "./navbar-Logo";
 import Tabs from "./navbar-Tabs";
 import MobileMenu from "./navbar-mobileMenu";

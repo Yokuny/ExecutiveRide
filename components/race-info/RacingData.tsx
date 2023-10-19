@@ -1,8 +1,9 @@
+import { useGlobalContext } from "@/app/context";
+
 import { Modal, ModalContent, ModalHeader, ModalFooter, useDisclosure } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
 import { ConfirmIcon, FileIcon } from "../icons";
 import RacingDataBody from "./RacingDataBody";
-import { useGlobalContext } from "@/app/context";
 
 const RacingData = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();

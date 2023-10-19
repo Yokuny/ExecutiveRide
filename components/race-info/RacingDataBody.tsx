@@ -1,5 +1,6 @@
-import { ModalBody } from "@nextui-org/modal";
 import { useGlobalContext } from "@/app/context";
+
+import { ModalBody } from "@nextui-org/modal";
 import RacingDataItem from "./RacingDataItem";
 
 const RacingDataBody = () => {

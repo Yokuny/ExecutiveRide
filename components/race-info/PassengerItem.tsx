@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useGlobalContext } from "@/app/context";
+import type { PassengerItemProps } from "@/types";
+
 import { Input } from "@nextui-org/input";
 import { LocationIcon } from "../icons";
-import type { PassengerItemProps } from "@/types";
 
 const PassengerItem = ({ data, index }: PassengerItemProps) => {
   const { location, setLocation } = useGlobalContext();

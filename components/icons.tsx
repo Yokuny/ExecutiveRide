@@ -237,7 +237,7 @@ export const CalenderIcon: React.FC<IconSvgProps> = ({ size = 24, width, height,
         fill="none"
         stroke="currentColor"
         strokeLinejoin="round"
-        stroke-Width="32"
+        strokeWidth="32"
         x="48"
         y="80"
         width="416"

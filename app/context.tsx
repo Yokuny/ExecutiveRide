@@ -1,6 +1,6 @@
 "use client";
 import { createContext, useContext, useState } from "react";
-import { LocationData, ContextProps, ChildrenProps } from "@/types";
+import type { LocationData, ContextProps, ChildrenProps } from "@/types";
 
 const GlobalContext = createContext<ContextProps>({
   location: [] as LocationData[],

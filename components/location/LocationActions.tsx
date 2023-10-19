@@ -1,9 +1,10 @@
 "use client";
-import { Button } from "@nextui-org/button";
+import { useEffect } from "react";
 import { useGlobalContext } from "@/app/context";
 import type { LocationData, LocationActionsProps } from "@/types";
+
+import { Button } from "@nextui-org/button";
 import { TrashIcon, ConfirmIcon } from "../icons";
-import { useEffect } from "react";
 
 const LocationActions = ({ erase, data, disabled }: LocationActionsProps) => {
   const { location, setLocation, creatAt, setDate } = useGlobalContext();

@@ -1,6 +1,6 @@
-import { NavbarBrand } from "@nextui-org/navbar";
 import NextLink from "next/link";
 
+import { NavbarBrand } from "@nextui-org/navbar";
 import { LogoImg } from "@/components/icons";
 
 const Logo = () => {

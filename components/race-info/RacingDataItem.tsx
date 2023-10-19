@@ -1,6 +1,7 @@
-import { UserIcon, CalenderIcon, CalenderNumberIcon } from "../icons";
-import type { RacingDataItemProps } from "@/types";
 import extractData from "../../utils/formattedHour";
+import type { RacingDataItemProps } from "@/types";
+
+import { UserIcon, CalenderIcon, CalenderNumberIcon } from "../icons";
 
 const RacingDataItem = ({ firstPoint, data }: RacingDataItemProps) => {
   return (

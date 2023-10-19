@@ -1,4 +1,5 @@
 import { useGlobalContext } from "@/app/context";
+
 import { ModalBody } from "@nextui-org/modal";
 import PassengerItem from "./PassengerItem";
 

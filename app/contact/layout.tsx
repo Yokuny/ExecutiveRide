@@ -1,4 +1,4 @@
-import { ChildrenProps } from "@/types";
+import type { ChildrenProps } from "@/types";
 
 export default function AboutLayout({ children }: ChildrenProps) {
   return (

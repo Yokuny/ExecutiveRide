@@ -1,5 +1,5 @@
+import type { ItemPartProps } from "@/types";
 import ABPoint from "./ABPoint";
-import { ItemPartProps } from "@/types";
 
 const ItemContent = ({ icon, address }: ItemPartProps) => {
   return (

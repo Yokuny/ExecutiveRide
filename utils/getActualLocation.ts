@@ -1,11 +1,4 @@
-import type { LocationData } from "@/types";
-
-interface Geolocation {
-  coords: {
-    latitude: number;
-    longitude: number;
-  };
-}
+import type { LocationData, Geolocation } from "@/types";
 
 const locationByLatLon = async (latitude: number, longitude: number) => {
   const response = await fetch(

@@ -5,7 +5,7 @@ import UserCard from "@/components/user-card/UserCard";
 
 export default async function Home() {
   return (
-    <section className="flex flex-col items-center gap-3 pb-6 md:py-6 py-2">
+    <section className="gap-3 flex flex-col items-center">
       <Location />
       <RaceInfo />
       <PlacesList />

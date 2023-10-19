@@ -1,9 +1,10 @@
-import NextLink from "next/link";
 import clsx from "clsx";
-import { NavbarItem } from "@nextui-org/navbar";
 import { usePathname } from "next/navigation";
+import type { TabsProps } from "@/types";
+
+import NextLink from "next/link";
+import { NavbarItem } from "@nextui-org/navbar";
 import { link as linkStyles } from "@nextui-org/theme";
-import { TabsProps } from "@/types";
 
 const Tabs = ({ routes }: TabsProps) => {
   const path = usePathname();

@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { Input } from "@nextui-org/input";
 import type { LoginInputsProps } from "@/types";
-import { useState } from "react";
 
 const LoginInputs = ({ emailErr, passwordErr, emailValidation, passwordValidation }: LoginInputsProps) => {
   const [emailValue, setEmailValue] = useState("");

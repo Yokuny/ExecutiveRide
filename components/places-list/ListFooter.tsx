@@ -1,10 +1,11 @@
+import type { DisabledProps } from "@/types";
+
 import { CardFooter } from "@nextui-org/card";
 import { Button } from "@nextui-org/button";
-import type { ListFooterProps } from "@/types";
 import ListFooterSkeleton from "./ListFooterSkeleton";
 import AddPersonBtn from "./AddPersonBtn";
 
-const ListFooter = ({ disabled }: ListFooterProps) => {
+const ListFooter = ({ disabled }: DisabledProps) => {
   return (
     <CardFooter className="w-3/4 flex justify-center items-center gap-4">
       {disabled ? (

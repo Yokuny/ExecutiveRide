@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useGlobalContext } from "@/app/context";
+
 import { Modal, ModalContent, ModalHeader, ModalFooter, useDisclosure } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
 import { ConfirmIcon, UserIcon } from "../icons";

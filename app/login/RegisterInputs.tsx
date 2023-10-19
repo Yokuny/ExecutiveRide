@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { Input } from "@nextui-org/input";
 import type { RegisterInputsProps } from "@/types";
-import { useState } from "react";
 
 const RegisterInputs = ({
   nameErr,

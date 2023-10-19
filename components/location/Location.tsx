@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Card, CardBody } from "@nextui-org/card";
 import type { LocationData } from "@/types";
+
+import { Card, CardBody } from "@nextui-org/card";
 import LocationSearch from "./LocationSearch";
 import ActualLocation from "./ActualLocation";
 import LocationActions from "./LocationActions";
@@ -21,7 +22,7 @@ const Location = () => {
   }, [locationData]);
 
   return (
-    <Card className="w-full flex max-w-4xl p-3" radius="sm">
+    <Card className="w-full flex max-w-4xl p-3" radius="none">
       <CardBody className="md:p-3 p-0 gap-4 flex items-center w-full">
         <LocationSearch setLoading={setLoading} setLocation={setLocationData} />
         <ActualLocation loading={loading} address={locationData?.address} />

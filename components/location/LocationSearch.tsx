@@ -1,9 +1,10 @@
 import { useState } from "react";
+import type { LocationData, LocationSearchProps } from "@/types";
+import { getActualLocation, searchAddress } from "../../utils/getActualLocation";
+
 import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
-import type { LocationData, LocationSearchProps } from "@/types";
 import { SearchIcon, TrackIcon } from "../icons";
-import { getActualLocation, searchAddress } from "../../utils/getActualLocation";
 
 const LocationSearch = ({ setLoading, setLocation }: LocationSearchProps) => {
   const [address, setAddress] = useState("");

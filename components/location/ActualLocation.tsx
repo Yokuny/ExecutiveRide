@@ -1,4 +1,4 @@
-import { ActualLocationProps } from "@/types";
+import type { ActualLocationProps } from "@/types";
 
 const ActualLocation = ({ loading, address }: ActualLocationProps) => {
   if (typeof address !== "string") address = "Compartilhe sua localização";

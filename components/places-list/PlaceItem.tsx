@@ -1,5 +1,5 @@
+import type { PlaceItemProps } from "@/types";
 import ItemContent from "./ItemContent";
-import { PlaceItemProps } from "@/types";
 
 const PlaceItem = ({ firstAddress, secondAddress }: PlaceItemProps) => {
   if (!secondAddress) secondAddress = "-";

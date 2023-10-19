@@ -1,11 +1,11 @@
 import { useRouter } from "next/navigation";
 import Cookie from "js-cookie";
+import type { MenuProps } from "@/types";
 
-import { NavbarContent, NavbarMenu, NavbarMenuToggle, NavbarMenuItem } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
 import { Button } from "@nextui-org/button";
 import { ThemeSwitch } from "@/components/theme-switch";
-import type { MenuProps } from "@/types";
+import { NavbarContent, NavbarMenu, NavbarMenuToggle, NavbarMenuItem } from "@nextui-org/navbar";
 
 const Menu = ({ routes, loggedIn }: MenuProps) => {
   const router = useRouter();
