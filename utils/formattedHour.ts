@@ -1,8 +1,6 @@
 const extractData = (format: string, data: Date) => {
-  // Converte a data para um objeto Date.
   const date = new Date(data);
 
-  // Extrai a hora do objeto Date.
   const hour = date.getHours();
   const minute = date.getMinutes();
   const second = date.getSeconds();

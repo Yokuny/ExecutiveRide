@@ -15,6 +15,8 @@ import RegisterInputs from "./RegisterInputs";
 const LoginLogout = () => {
   const router = useRouter();
   const API = process.env.NEXT_PUBLIC_API;
+  alert("<> API<>");
+  alert(API);
 
   const [selected, setSelected] = useState("Entrar");
   const [name, setName] = useState("");
@@ -32,8 +34,8 @@ const LoginLogout = () => {
     }
     try {
       const res = await axios.post(`${API}/user/signin`, { email, password });
-      Cookie.set("auth_token", res.data.token);
       alert(JSON.stringify(res.data, null, 2));
+      Cookie.set("auth_token", res.data.token);
       router.push("/app");
     } catch (err) {
       setEmailError(true);
@@ -48,7 +50,9 @@ const LoginLogout = () => {
       return;
     }
     try {
-      await axios.post(`${API}/user/signup`, { name, email, password });
+      const a = await axios.post(`${API}/user/signup`, { name, email, password });
+      alert("aqui");
+      alert(JSON.stringify(a.data, null, 2));
       setSelected("Entrar");
     } catch (err) {
       setNameErr(true);
