@@ -1,11 +1,10 @@
 import type { DistanceBodyProps } from "@/types";
 import { ModalBody } from "@nextui-org/modal";
-import { WayIcon, ClockIcon, CalenderNumberIcon, CalenderIcon } from "../icons";
+import { Chip } from "@nextui-org/chip";
 import DistanceAndDuration from "./RouteAndDurationItem";
 
 const DistanceBody = ({ data }: DistanceBodyProps) => {
   if (!data) return <></>;
-  // alert(JSON.stringify(data, null, 2));
   return (
     <ModalBody className="flex gap-6">
       <DistanceAndDuration distance={data.routeDistance} duration={data.expectedDuration} />
@@ -13,12 +12,16 @@ const DistanceBody = ({ data }: DistanceBodyProps) => {
         <div className="gap-1 flex flex-col" key={`routerInfo-${index}`}>
           <div className="flex gap-4">
             <div className="flex items-center gap-2">
-              <p className="text-small">Distancia:</p>
-              <span className="text-base font-medium">{step.distance}</span>
+              <p className="text-xs font-medium">Distancia:</p>
+              <Chip className="bg-default-100" radius="sm">
+                <span className="font-medium">{step.distance}</span>
+              </Chip>
             </div>
             <div className="flex items-center gap-2">
-              <p className="text-small">Duração:</p>
-              <span className="text-base font-medium">{step.duration}</span>
+              <p className="text-xs font-medium">Duração:</p>
+              <Chip className="bg-default-100" radius="sm">
+                <span className="font-medium">{step.duration}</span>
+              </Chip>
             </div>
           </div>
           <div className="flex-col items-center justify-between gap-1">

@@ -23,7 +23,7 @@ const Distance = () => {
 
       if (typeof routeData === "number") setDistance(routeData);
       else {
-        setDistance(routeData.expectedDuration);
+        setDistance(routeData.routeDistance.toFixed(2));
         setRouteData(routeData);
       }
     } finally {

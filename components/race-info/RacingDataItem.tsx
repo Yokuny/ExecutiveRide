@@ -12,11 +12,12 @@ const RacingDataItem = ({ firstPoint, data }: RacingDataItemProps) => {
       </div>
       <div className="flex items-center gap-3">
         <CalenderIcon size={16} />
-        <span className="text-sm">{extractData("full", firstPoint.creatAt)}</span>
+        <span className="text-xs font-medium">{extractData("full", firstPoint.creatAt)}</span>
       </div>
       <div className="flex items-center gap-3">
         <CalenderNumberIcon size={16} />
-        <span className="text-sm">Chegada: {extractData("hour", data.creatAt)}</span>
+        <p className="text-xs font-medium">Chegada:</p>
+        <span className="font-medium">{extractData("hour", data.creatAt)}</span>
       </div>
       <div className="flex-col items-center justify-between gap-1">
         <span className="text-sm w-full">{firstPoint.address}</span>

@@ -1,3 +1,4 @@
+import formatTime from "../../utils/formatTime";
 import { WayIcon } from "../icons";
 
 type RouteAndDurationItemProps = {
@@ -13,13 +14,13 @@ const RouteAndDurationItem = ({ distance, duration }: RouteAndDurationItemProps)
           <WayIcon size={16} />
           <p>Distancia:</p>
         </div>
-        <p className="text-xl font-semibold">{distance} km</p>
+        <p className="text-xl font-semibold">{distance.toFixed(1)} km</p>
       </div>
       <div className="flex flex-col">
         <div className="flex text-sm items-center gap-1">
           <p>Duração prevista:</p>
         </div>
-        <p className="text-xl font-semibold">{duration}</p>
+        <p className="text-xl font-semibold">{formatTime(duration)}</p>
       </div>
     </div>
   );
