@@ -7,6 +7,7 @@ import { emailRegex, passwordRegex, titleRegex } from "@/utils/regex";
 
 import { Card, CardBody } from "@nextui-org/card";
 import { Button } from "@nextui-org/button";
+import { Spinner } from "@nextui-org/spinner";
 import { Link } from "@nextui-org/link";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import LoginInputs from "./LoginInputs";
@@ -17,6 +18,7 @@ const LoginLogout = () => {
   const API = process.env.NEXT_PUBLIC_API;
 
   const [selected, setSelected] = useState("Entrar");
+  const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,6 +27,7 @@ const LoginLogout = () => {
   const [passwordError, setPasswordError] = useState(false);
 
   const handleSignin = async () => {
+    setLoading(true);
     if (!emailValidation(email) || !passwordValidation(password)) {
       setEmailError(true);
       setPasswordError(true);
@@ -37,9 +40,12 @@ const LoginLogout = () => {
     } catch (err) {
       setEmailError(true);
       setPasswordError(true);
+    } finally {
+      setLoading(false);
     }
   };
   const handleSignup = async () => {
+    setLoading(true);
     if (!emailValidation(email) || !passwordValidation(password) || !nameValidation(name)) {
       setNameErr(true);
       setEmailError(true);
@@ -53,6 +59,8 @@ const LoginLogout = () => {
       setNameErr(true);
       setEmailError(true);
       setPasswordError(true);
+    } finally {
+      setLoading(false);
     }
   };
   // data validation
@@ -116,7 +124,7 @@ const LoginLogout = () => {
               </p>
               <div className="flex gap-2 justify-end">
                 <Button fullWidth color="primary" onClick={handleSignin}>
-                  Entrar
+                  {loading ? <Spinner size="sm" color="default" /> : "Entrar"}
                 </Button>
               </div>
             </form>
@@ -139,7 +147,7 @@ const LoginLogout = () => {
               </p>
               <div className="flex gap-2 justify-end">
                 <Button fullWidth color="primary" onClick={handleSignup}>
-                  Registre
+                  {loading ? <Spinner size="sm" color="default" /> : "Registre"}
                 </Button>
               </div>
             </form>
