@@ -14,7 +14,6 @@ const getAllPointsDistance = async (locations: LocationData[]) => {
 
     return response.data as RouteDistanceAndDuration;
   } catch (error) {
-    console.log(error);
     return 0;
   }
 };
