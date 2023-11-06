@@ -35,6 +35,7 @@ export const getActualLocation = async (): Promise<LocationData> => {
     navigator.geolocation.getCurrentPosition(resolve, reject)
   );
   const { latitude, longitude } = geoCoords?.coords;
+
   const locationData = await locationByLatLon(latitude, longitude);
   return locationFactory(locationData);
 };

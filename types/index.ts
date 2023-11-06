@@ -123,8 +123,8 @@ export type ErrorProps = {
 export type ContextProps = {
   location: LocationData[];
   setLocation: Dispatch<SetStateAction<LocationData[]>>;
-  creatAt: Date;
-  setDate: {};
+  creatAt: null | Date;
+  setCreatAt: Dispatch<SetStateAction<Date | null>>;
   currPassager: string;
   setCurrPassager: Dispatch<SetStateAction<string>>;
 };

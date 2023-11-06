@@ -11,6 +11,7 @@ const ElapsedTime = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
+      if (!creatAt) return;
       const timestamp = Date.now() - creatAt.getTime();
       const time = timestamp / 1000;
       setDate(formatTime(time));

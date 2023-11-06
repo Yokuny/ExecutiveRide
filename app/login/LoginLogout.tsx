@@ -129,7 +129,7 @@ const LoginLogout = () => {
               </div>
             </form>
           </Tab>
-          <Tab key="Registre" title="Registre">
+          <Tab key="Registre" title="Registrar">
             <form className="flex flex-col gap-4">
               <RegisterInputs
                 nameErr={nameErr}
