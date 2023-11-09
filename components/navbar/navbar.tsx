@@ -18,6 +18,7 @@ const Navbar = () => {
   const appRoute = "/app";
 
   useEffect(() => {
+    if (path === null) return;
     if (path.startsWith(appRoute)) {
       serLoggedIn(true);
       setRoutes(siteConfig.privatePages);
